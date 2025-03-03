@@ -92,7 +92,7 @@ GFIX =
 #ACHK = -fbounds-check -finit-real=inf
 #ACHK = -fbounds-check -finit-real=inf -ffpe-trap=invalid,zero,denormal
 
-PLTOBJ = ../plotlib/libPlt.a
+PLTOBJ = ../plotlib/libPlt_gSP.a
 EIGOBJ = ../eispack/libeispack.a
 
 ##--------------------------

@@ -1,0 +1,26 @@
+
+### Intel Fortran Compiler 8.x
+#FC = ifort
+#FFLAGS = -O -r8
+##--------------------------
+###  Mingw compiler double precision (-fdefault-real-8)
+FC = gfortran
+FFLAGS = -O2 -fomit-frame-pointer -msse3 -fbounds-check -Wall -ffixed-line-length-80
+##--------------------------
+
+EISLIB = libeispack.a
+AR = ar r
+RANLIB = ranlib
+
+
+all: $(EISLIB)
+
+eispack.o: eispack.f
+	$(FC) -c $(FFLAGS) eispack.f
+
+$(EISLIB): eispack.o
+	$(AR) $(EISLIB) eispack.o
+	$(RANLIB) $(EISLIB)
+
+clean:
+	-/bin/rm *.o *.a

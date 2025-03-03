@@ -88,6 +88,6 @@ mingwDP:
 clean:
 		@cp ./config.make.gfortran	./config.make
 		@make -f Makefile.all clean
-		@rm W32win3.o
+		@rm -f W32win3.o
 
 
