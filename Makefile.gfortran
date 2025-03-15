@@ -1,0 +1,15 @@
+# debian 10
+# sudo apt install gfortran
+# sudo apt install liblapack-dev (also installs libblas)
+
+# see also https://airfoildatabase.readthedocs.io/en/latest/xfoil_installation.html
+
+all:
+	$(MAKE) -C plotlib gfortran
+	$(MAKE) -C eispack -f Makefile.gfortran
+	$(MAKE) -C bin -f Makefile.gfortran
+
+clean:
+	$(MAKE) -C plotlib gfortran clean
+	$(MAKE) -C eispack -f Makefile.gfortran clean
+	$(MAKE) -C bin -f Makefile.gfortran clean

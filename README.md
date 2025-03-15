@@ -6,6 +6,6 @@ and see https://web.mit.edu/drela/Public/web/avl/ for more info on AVL.
 
 Changes to Mark's version include:
 
-* a build.sh file to build everything in one step
-* Makefiles & friends are set up to build with gcc/ gfortran
+* a makefile file to build everything in one step
+* makefiles & friends are set up to build with gcc/ gfortran
 * minor fixes
